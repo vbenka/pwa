@@ -1,13 +1,13 @@
 const staticCache = 'static-pwa-v10';
 const dynamicCache = 'dynamic-pwa-v10';
 const assets = [
-  '/',
-  '/index.html',
-  '/favicon.ico',
-  '/css/style.css',
-  '/js/main.js',
-  '/pages/fallback.html',
-  '/images/noimage-250.png'
+  './',
+  './index.html',
+  './favicon.ico',
+  './css/style.css',
+  './js/main.js',
+  './pages/fallback.html',
+  './images/noimage-250.png'
 ];
 
 self.addEventListener('install', e => {
