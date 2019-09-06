@@ -6,8 +6,8 @@ const assets = [
   './favicon.ico',
   './css/style.css',
   './js/main.js',
-  'pages/fallback.html',
-  'images/noimage-250.png'
+  './pages/fallback.html',
+  './images/noimage-250.png'
 ];
 
 self.addEventListener('install', e => {
