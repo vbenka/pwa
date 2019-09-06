@@ -33,9 +33,9 @@ self.addEventListener('fetch', e => {
       return cacheRes || fetch(e.request).then(fetchRes => {
         if (fetchRes.clone().status === 404) {
           if (e.request.url.includes('.html')) {
-            return caches.match('/pages/fallback.html');
+            return caches.match('./pages/fallback.html');
           } else if (e.request.url.includes('.png') || e.request.url.includes('.jpg')) {
-            return caches.match('/images/noimage-250.png');
+            return caches.match('./images/noimage-250.png');
           }
         } 
         return caches.open(dynamicCache).then(cache => {
@@ -45,9 +45,9 @@ self.addEventListener('fetch', e => {
       });
     }).catch(() => {
       if (e.request.url.includes('.html')) {
-        return caches.match('/pages/fallback.html');
+        return caches.match('./pages/fallback.html');
       }else if (e.request.url.includes('.png') || e.request.url.includes('.jpg')) {
-        return caches.match('/images/noimage-250.png');
+        return caches.match('./images/noimage-250.png');
       }
     })
   );
