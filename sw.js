@@ -31,7 +31,6 @@ self.addEventListener('fetch', e => {
   e.respondWith(
     caches.match(e.request).then(cacheRes => {
       return cacheRes || fetch(e.request).then(fetchRes => {
-        console.log(fetchRes.clone().status)
         if (fetchRes.clone().status === 404) {
           if (e.request.url.includes('.html')) {
             return caches.match('./pages/fallback.html');
